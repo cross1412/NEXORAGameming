@@ -1,0 +1,34 @@
+{
+  "name": "nexora-gaming",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4173 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "server": "node --env-file-if-exists=.env server/index.js",
+    "db:seed": "node --env-file-if-exists=.env scripts/seed-catalog.js",
+    "admin:promote": "node --env-file-if-exists=.env scripts/promote-admin.js",
+    "db:seed:hosted": "node --env-file=.env.production scripts/seed-catalog.js",
+    "admin:promote:hosted": "node --env-file=.env.production scripts/promote-admin.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "csurf": "^1.11.0",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.5",
+    "framer-motion": "^14.14.0",
+    "helmet": "^8.3.0",
+    "howler": "^2.2.4",
+    "lucide-react": "latest",
+    "mysql2": "^3.24.6",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest",
+    "xss-clean": "^0.1.4"
+  }
+}

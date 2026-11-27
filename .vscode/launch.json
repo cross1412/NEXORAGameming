@@ -1,0 +1,15 @@
+{
+    // ใช้ IntelliSense เพื่อเรียนรู้เกี่ยวกับแอตทริบิวต์ที่เป็นไปได้
+    // วางเมาส์เหนือเพื่อดูคำอธิบายของแอตทริบิวต์ที่มีอยู่
+    // สำหรับข้อมูลเพิ่มเติม โปรดไปที่: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:4173",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
