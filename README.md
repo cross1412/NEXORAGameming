@@ -10,6 +10,12 @@
 
 The registration and login screens use the API and MySQL database. The cart is saved in this browser. Checkout creates a **demo-only** order record in the signed-in user's order history; it does not charge a payment method or arrange shipping. Do not treat demo orders as real sales.
 
+## Use XAMPP locally
+
+XAMPP can provide the local MySQL-compatible database. Start **MySQL** in the XAMPP Control Panel; Apache is only needed if you want to use phpMyAdmin. Import `database/schema.sql` into the database, then copy `.env.example` to `.env` and set `DB_HOST=127.0.0.1`, `DB_PORT=3306`, `DB_USER=root`, and `DB_PASSWORD` to the password configured for your XAMPP MySQL account (the default is usually blank).
+
+The website and API still run with Node.js: start `npm run server` and `npm run dev` in separate terminals on the same computer as XAMPP, then open `http://localhost:4173`. XAMPP is only local; a Vercel website cannot connect to MySQL running on your computer. If this repository is open in Codespaces or another remote workspace, `127.0.0.1` refers to that remote machine, not your PC; clone the repository and run Node.js locally alongside XAMPP.
+
 ## Full-stack deployment (Vercel + Render)
 
 Vercel serves the Vite website; Render runs the Express API. The API also needs a MySQL database reachable from Render. Vercel and Render cannot connect to the MySQL server running in this local workspace.
